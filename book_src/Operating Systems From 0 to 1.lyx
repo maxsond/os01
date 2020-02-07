@@ -1,5 +1,5 @@
-#LyX 2.2 created this file. For more info see http://www.lyx.org/
-\lyxformat 508
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
 \begin_document
 \begin_header
 \save_transient_properties true
@@ -190,7 +190,7 @@ enlarge top initially by=5mm,
 \RequirePackage{ragged2e}
 \setlength{\RaggedRightRightskip}{\z@ plus 0.01\hsize}
 \end_preamble
-\options fleqn,bibliography=totoc,index=totoc,BCOR7.5mm,titlepage,captions=tableheading
+\options bibliography=totoc,index=totoc,BCOR7.5mm,titlepage,captions=tableheading
 \use_default_options true
 \begin_modules
 eqs-within-sections
@@ -238,6 +238,8 @@ End
 \font_osf false
 \font_sf_scale 110 100
 \font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures false
 \graphics default
 \default_output_format default
 \output_sync 1
@@ -282,6 +284,7 @@ End
 \suppress_date false
 \justification true
 \use_refstyle 0
+\use_minted 0
 \notefontcolor #aa007f
 \index Index
 \shortcut idx
@@ -293,7 +296,11 @@ End
 \tocdepth 1
 \paragraph_separation skip
 \defskip smallskip
-\quotes_language english
+\is_math_indent 1
+\math_indentation default
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
 \papercolumns 1
 \papersides 2
 \paperpagestyle fancy
@@ -443,7 +450,7 @@ You've probably asked yourself at least once how an operating system is
 If that is the case, this book is for you.
  By going through this book, you will be able to find the missing pieces
  that are essential and enable you to implement your own operating system
- from scratch! Yes, from scratch without going through any existing operating
+ from scratch! Yes, from scratch, without going through any existing operating
  system layer to prove to yourself that you are an operating system developer.
  You may ask,
 \begin_inset Quotes eld
@@ -583,8 +590,8 @@ Hello World
 Let's dive in.
  With this book, I hope to provide enough foundational knowledge that will
  open doors for you to make sense of other resources.
- This book is will be especially beneficial to students who've just finished
- their first C/C++ course.
+ This book will be beneficial to students who've just finished their first
+ C/C++ course greatly.
  Imagine how cool it would be to show prospective employers that you've
  already built an operating system.
 \end_layout
@@ -683,7 +690,7 @@ Know how to pipe output to another program
 Touch typing.
  Since we are going to use Linux, touch typing helps.
  I know typing speed does not relate to problem-solving, but at least your
- typing speed should be fast enough not to let it get it the way and degrade
+ typing speed should be fast enough not to let it get in the way and degrade
  the learning experience.
 \end_layout
 
@@ -885,8 +892,8 @@ Groundwork
 
 \emph default
 .
- After mastering this part, the reader can either continue with the next
- part that is a guide on writing an operating system.
+ After mastering this part, the reader can continue with the next part,
+ which is a guide for writing an operating system.
  However, if the reader does not like the presentation, he or she can look
  elsewhere, such as OSDev Wiki: 
 \begin_inset Flex URL
@@ -1043,6 +1050,7 @@ the part of the world
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Kovitz_psr"
+literal "true"
 
 \end_inset
 
@@ -1225,7 +1233,7 @@ Problem domains: Software and Non-software.
 \end_layout
 
 \begin_layout Standard
-One example of such scenario is the domain that is presenting in this book:
+One example of such scenario is the domain that is presented in this book:
  
 \emph on
 operating system
@@ -1233,9 +1241,9 @@ operating system
 .
  A certain amount of electrical engineering (EE) knowledge is required to
  implement an operating system.
- If a computer science (CS) curriculum that does not include minimum EE
- courses, students in the curriculum have little chance to implement a working
- operating system.
+ If a computer science (CS) curriculum does not include minimum EE courses,
+ students in the curriculum have little chance to implement a working operating
+ system.
  Even if they can implement one, either they need to invest a significant
  amount of time to study on their own, or they fill code in a predefined
  framework just to understand high-level algorithms.
@@ -1265,8 +1273,8 @@ Algorithms and Data Structures
 
 
 \emph default
- classes are usually enough to get them start writing code for device drivers,
- and later generalize it into an 
+ classes are usually enough to get them started writing code for device
+ drivers, and later generalize it into an 
 \emph on
 operating system.
 \end_layout
@@ -1323,7 +1331,7 @@ One thing to note is that software is its own problem domain.
  science domain than a software engineering domain).
  In general, a software-exclusive domain creates software to be used by
  other software.
- Operating System is also a domain, but is overlapped with other domain
+ Operating System is also a domain, but is overlapped with other domains
  such as electrical engineering.
  To effectively implement an operating system, it is required to learn enough
  of the external domain.
@@ -1338,13 +1346,13 @@ Learning a programming language, even C or Assembly, does not mean a software
  engineer can automatically be good at hardware programming or any related
  low-level programming domains.
  One can spend 10 years, 20 years or his entire life writing C/C++ code,
- and he still cannot write an operating system, simply because of the ignorant
+ and he still cannot write an operating system, simply because of the ignorance
  of relevant domain knowledge.
  Just like learning English does not mean a person automatically becomes
  good at reading Math books written in English.
  Much more than that is needed.
  Knowing one or two programming languages is not enough.
- If a programmer writes software for a living, he should better be specialized
+ If a programmer writes software for a living, he had better be specialized
  in one or two problem domains outside of software if he does not want his
  job taken by domain experts who learn programming in their spare time.
 \end_layout
@@ -1357,7 +1365,7 @@ Documents for implementing a problem domain
 Documents are essential for learning a problem domain (and actually, anything)
  since information can be passed down in a reliable way.
  It is evident that this written text has been used for thousands of years
- to pass knowledge from generations to generations.
+ to pass knowledge from generation to generation.
  Documents are integral parts of non-trivial projects.
  Without the documents:
 \end_layout
@@ -1431,6 +1439,7 @@ Software requirement document
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Kovitz_psr"
+literal "true"
 
 \end_inset
 
@@ -1451,17 +1460,17 @@ A software solves a business problem.
  The better understood the domain, the higher quality software can be.
  For example, building a house is practiced over thousands of years and
  is well understood, and it is easy to build a high-quality house; software
- is no difference.
- Code that is difficult to understand, usually because of the ignorance
- of problem domain.
- In the context of this book, we sought to understand the low-level working
+ is no different.
+ Code that is difficult to understand is usually due to the author's ignorance
+ of a problem domain.
+ In the context of this book, we seek to understand the low-level working
  of various hardware devices.
 \end_layout
 
 \begin_layout Standard
-Because software quality depends upon the understandings of the problem
- domain, the amount of software requirement document should consist of problem
- domain description.
+Because software quality depends upon the understanding of the problem domain,
+ the amount of software requirement document should consist of problem domain
+ description.
 \end_layout
 
 \begin_layout Standard
@@ -1612,23 +1621,23 @@ In the future, instead of a drop-down menu, all books are listed directly
 
 \begin_layout Standard
 More often than not there is no straightforward one-to-one mapping.
- For example, a regular computer user expects OS to be something that runs
- some program with GUI, or their favorite computer games.
+ For example, a regular computer user expects an OS to be something that
+ runs some program with GUI, or their favorite computer games.
  But for such requirements, an operating system is implemented as multiple
- layers, each hides the details from the upper layers.
+ layers, each hiding the details from the upper layers.
  To implement an operating system, a large body of knowledge from multiple
- fields are required, especially if the operating system runs on non-PC
- devices.
+ fields is required, especially if the operating system runs on non-PC devices.
  
 \end_layout
 
 \begin_layout Standard
-It's better to put anything related to the problem domain in the requirement
- document.
- A good way to test the quality of requirement document is to hand it to
- the domain expert for proofreading if he can understand the material thoroughly.
- Requirement document is also useful as a help document later, or for writing
- one much easier.
+It's best to include information related to the problem domain in the requiremen
+t document.
+ A good way to test the quality of a requirement document is to provide
+ it to a domain expert for proofreading, to ensure he can understand the
+ material thoroughly.
+ A requirement document is also useful as a help document later, or for
+ writing one much easier.
 \end_layout
 
 \end_deeper
@@ -1673,6 +1682,7 @@ Software specification
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Kovitz_psr"
+literal "true"
 
 \end_inset
 
@@ -1723,7 +1733,7 @@ When problem domain is different from software domain, requirement document
  However, if the problem domain is inside software, specification most often
  includes both, and content of both can be mixed with each other.
  As demonstrated by previous sections the importance of documents, to implement
- an OS, we will need to collects relevant documents to gain sufficient domain
+ an OS, we will need to collect relevant documents to gain sufficient domain
  knowledge.
  These documents are as follow:
 \end_layout
@@ -2239,6 +2249,7 @@ functionally complete
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Peirce"
+literal "true"
 
 \end_inset
 
@@ -2537,7 +2548,7 @@ From NAND gate, we have all other gates.
 &
 \family default
  is executed by an AND circuit and so on.
- Code does not run on magic a black box.
+ Code does not run on a magic black box.
  In contrast, code execution is precise and transparent, often as simple
  as running some hardwired circuit.
  When we write software, we simply manipulate electrical current at the
@@ -2558,6 +2569,7 @@ a k-input gate uses k PMOS and k NMOS transistors
 \begin_inset CommandInset citation
 LatexCommand citep
 key "John_digital"
+literal "true"
 
 \end_inset
 
@@ -2708,7 +2720,7 @@ status collapsed
 
 \begin_layout Plain Layout
 
-http://www.nxp.com/documents/data_sheet/74HC_HCT00.pdf
+http://www.scrpdf.com/pdf/Semiconductors_new/Logic/74HCT/74HC_HCT00.pdf
 \end_layout
 
 \end_inset
@@ -2813,8 +2825,8 @@ begin{figure}
 
 
 \backslash
-caption{Some logic gates built from NAND gates.
- EAch accepts 2 input signals and generate 1 output signal.}
+caption{Gates built from NAND gates, each accepts 2 input signals and generate
+ 1 output signal.}
 \end_layout
 
 \begin_layout Plain Layout
@@ -2896,10 +2908,10 @@ end{figure}
 \end_layout
 
 \begin_layout Standard
-How can the above gates can be created with 74HC00? It is simple: as every
- gate has 2 input pins and 1 output pin, we can write the output of 1 NAND
- gate to an input of another NAND gate, thus chaining NAND gates together
- to produce the diagrams as above.
+How can the above gates be created with 74HC00? It is simple: as every gate
+ has 2 input pins and 1 output pin, we can write the output of 1 NAND gate
+ to an input of another NAND gate, thus chaining NAND gates together to
+ produce the diagrams as above.
 \begin_inset Separator latexpar
 \end_inset
 
@@ -3020,7 +3032,7 @@ programmable device
 , since a user can use the language to command the device to perform different
  actions.
  For example, a printer has its set of commands for instructing it how to
- prints a page.
+ print a page.
 \begin_inset Separator latexpar
 \end_inset
 
@@ -3110,16 +3122,6 @@ http://www.nxp.com/documents/data_sheet/74HC_HCT00.pdf
 \end_layout
 
 \begin_layout Standard
-\begin_inset VSpace vfill
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Newpage pagebreak
-\end_inset
-
 Then, the functionality of each pin:
 \end_layout
 
@@ -4093,7 +4095,7 @@ The inputs and outputs as visually presented:
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -4187,7 +4189,7 @@ hfill{}
 
 
 \backslash
-subfloat[Pin layout; pin 3A and 3B take the values from 1Y and 2Y.]{
+subfloat[Pin 3A and 3B take the values from 1Y and 2Y.]{
 \end_layout
 
 \begin_layout Plain Layout
@@ -4214,7 +4216,7 @@ end{figure*}
 \end_inset
 
 
-\begin_inset Float table
+\begin_inset Float margintable
 wide false
 sideways false
 status open
@@ -4547,17 +4549,6 @@ offset "4ex"
 width "100col%"
 height "1.5pt"
 
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset VSpace vfill
-\end_inset
-
-
-\begin_inset Newpage pagebreak
 \end_inset
 
 
@@ -4994,7 +4985,8 @@ A decoder is built out of logic gates similar to other digital devices.
  However, a storage device can be anything that can store 0 and 1 and is
  retrievable.
  A storage device can be a magnetized device that uses magnetism to store
- information, or it can be made out of electrical circuits using.
+ information, or it can be made out of electrical circuits that can change
+ and rermember states when a voltage is applied.
  Regardless of the technology used, as long as the device can store data
  and is accessible to retrieve data, it suffices.
  Indeed, the modern devices are so complex that it is impossible and unnecessary
@@ -5294,8 +5286,8 @@ In reality, even though all languages are equivalent in power, not all of
 \end_layout
 
 \begin_layout Standard
-The higher level a programming language is, the distant it becomes with
- hardware.
+The higher level a programming language is, the more distant it becomes
+ from the hardware.
  In some high-level programming languages, such as Python, a programmer
  cannot manipulate underlying hardware, despite being able to deliver the
  same computations as low-level programming languages.
@@ -5451,6 +5443,7 @@ a k-input gate uses k PMOS and k NMOS transistors
 \begin_inset CommandInset citation
 LatexCommand citep
 key "John_digital"
+literal "true"
 
 \end_inset
 
@@ -5491,6 +5484,7 @@ Recurring patterns are the key to abstraction.
 \begin_inset CommandInset citation
 LatexCommand citeyearpar
 key "Hardy"
+literal "true"
 
 \end_inset
 
@@ -5676,8 +5670,8 @@ end{figure*}
 \begin_layout Standard
 As can be seen, the code perfectly expresses itself how the graph is connected.
  Even a non-programmer can understand and use such language easily.
- If it were to implement in C, it would be more troublesome, and this is
- assuming that the functions for drawing graphs are already available.
+ An implementation in C would be more troublesome, and that's assuming that
+ the functions for drawing graphs are already available.
  To draw a line, in C we might write something like:
 \end_layout
 
@@ -5937,6 +5931,7 @@ chassis
 LatexCommand href
 name "Wikimedia"
 target "https://commons.wikimedia.org/wiki/File:Wikimedia_Foundation_Servers-8055_35.jpg"
+literal "false"
 
 \end_inset
 
@@ -6387,6 +6382,7 @@ An Intel 82815 Graphics and Memory Controller Hub embedded on a PC motherboard.
 LatexCommand href
 name "Wikimedia"
 target "https://commons.wikimedia.org/wiki/File:Intel_82815_GMCH.jpg"
+literal "false"
 
 \end_inset
 
@@ -6434,6 +6430,7 @@ A PIC microcontroller.
 LatexCommand href
 name "Microchip"
 target "http://www.microchip.com/wwwproducts/en/PIC18F4620"
+literal "false"
 
 \end_inset
 
@@ -6875,6 +6872,7 @@ FPGA Architecture (Source:
 LatexCommand href
 name "National Instruments"
 target "http://www.ni.com/tutorial/6097/en/"
+literal "false"
 
 \end_inset
 
@@ -7432,6 +7430,7 @@ To effectively use the CPU, a programmer needs to understand the documentation
 LatexCommand href
 name "Intel® 64 and IA-32 Architectures Software Developer Manuals"
 target "[http://www.intel.com/content/www/us/en/processors/architectures-software-developer-manuals.html"
+literal "false"
 
 \end_inset
 
@@ -7444,14 +7443,14 @@ After understanding one CPU architecture well, it is easier to learn other
 \end_layout
 
 \begin_layout Standard
-A CPU is an implementation of an ISA, effective the implementation of an
- assembly language (and depends on the CPU architecture, the language may
- vary).
+A CPU is an implementation of an ISA, effectively the implementation of
+ an assembly language (and depending on the CPU architecture, the language
+ may vary).
  Assembly language is one of the interfaces that are provided for software
  engineers to control a CPU, thus control a computer.
  But how can every computer device be controlled with only the access to
  the CPU? The simple answer is that a CPU can communicate with other devices
- through these two interfaces, thus commanding them what to do:
+ through these two interfaces, thus commanding them:
 \end_layout
 
 \begin_layout Description
@@ -8251,7 +8250,31 @@ objdump
 
  to examine how high level source code maps to assembly code.
  For now, we ignore the output and learn how to use the command first.
- It is simple to use 
+ Supposed that we have a executable binary named 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+hello
+\end_layout
+
+\end_inset
+
+ compiled from a 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+hello.c
+\end_layout
+
+\end_inset
+
+ thath prints 
+\begin_inset Quotes eld
+\end_inset
+
+Hello World', it is simple to use 
 \begin_inset Flex Code
 status open
 
@@ -8838,7 +8861,7 @@ The
 second column
 \color inherit
  is assembly instruction in raw hex values.
- In the above example, the address is 
+ In the above example, the value is 
 \family typewriter
 0x55
 \family default
@@ -21361,7 +21384,7 @@ r/m
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -21388,7 +21411,7 @@ r/m
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -21448,7 +21471,8 @@ r/m
 \family typewriter
 reg/opcode
 \family default
- field finally provides the if an instruction requires one.
+ field finally provides an extra register or different variants, if an instructi
+on requires one.
 \begin_inset Separator latexpar
 \end_inset
 
@@ -26615,7 +26639,7 @@ This instruction:
 
 \begin_deeper
 \begin_layout LyX-Code
-jmp [eax * 4  + 
+jmp [eax * 4 + 
 \color red
 0x1234
 \color inherit
@@ -26628,7 +26652,7 @@ generates the machine code:
 \end_layout
 
 \begin_layout LyX-Code
-67 ff 24 8d 
+67 ff 24 85 
 \color red
 34 12 00 00
 \end_layout
@@ -26668,16 +26692,309 @@ generates the machine code:
 ModR/M
 \family default
  byte.
- The value suggests that a SIB byte follows, according to table 
+ According to table 
 \begin_inset CommandInset ref
 LatexCommand formatted
 reference "mod-rm-32"
 
 \end_inset
 
-.
+, the value suggests that a SIB byte follows, .
 \end_layout
 
+\begin_layout Itemize
+
+\family typewriter
+0x85
+\family default
+ is the 
+\family typewriter
+SIB
+\family default
+ byte.
+ According to table 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "sib"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, the byte 
+\family typewriter
+0x85
+\family default
+ can be destructured into bits as follow:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="8">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0.4cm">
+<column alignment="center" valignment="top" width="0.4cm">
+<column alignment="center" valignment="top" width="0.4cm">
+<column alignment="center" valignment="top" width="0.4cm">
+<column alignment="center" valignment="top" width="0.4cm">
+<column alignment="center" valignment="top" width="0.4cm">
+<column alignment="center" valignment="top" width="0.4cm">
+<column alignment="center" valignment="top" width="0.4cm">
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+SS
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+R/M
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+REG
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The above values are obtained through the columns 
+\series bold
+SS
+\series default
+,
+\series bold
+ R/M
+\series default
+ and finally the 8 column of 
+\series bold
+REG
+\series default
+ respectively.
+ The total bits combined into the value 
+\family typewriter
+10000101
+\family default
+, which is 
+\family typewriter
+0x85 
+\family default
+in hex value.
+ By default, if a register after the displacement is not specified, it is
+ set to 
+\family typewriter
+EBP
+\family default
+ register, and thus the 6
+\begin_inset script superscript
+
+\begin_layout Plain Layout
+th
+\end_layout
+
+\end_inset
+
+ column (bit pattern 
+\family typewriter
+101
+\family default
+) is always chosen.
+ If the example uses another register:
+\end_layout
+
+\begin_layout Example
+For example:
+\end_layout
+
+\begin_layout LyX-Code
+jmp [eax * 4 + eax + 
+\color red
+esi
+\color inherit
+]
+\end_layout
+
+\begin_layout Standard
+the 
+\family typewriter
+SIB
+\family default
+ byte becomes 
+\family typewriter
+0x86
+\family default
+ instead of , which is in the 7
+\begin_inset script superscript
+
+\begin_layout Plain Layout
+th
+\end_layout
+
+\end_inset
+
+ column.
+ Try to verify with the table 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "sib"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ again.
+\end_layout
+
+\end_deeper
 \begin_layout Itemize
 
 \family typewriter
@@ -30752,7 +31069,7 @@ unsigned numbers
 \emph default
 .
  Other than numerical calculations, unsigned numbers are used as a tool
- for structuring data in memory; we will this application see later in the
+ for structuring data in memory; we will see this application later on the
  book, when various data structures are organized into bit groups.
 \end_layout
 
@@ -30870,10 +31187,10 @@ end{figure}
 \end_layout
 
 \begin_layout Standard
-C only provides near pointer, since far pointer is platform dependent, such
- as x86.
+C only provides support for near pointers, since far pointers are platform
+ dependent, such as x86.
  In application code, you can assume that the address of current segment
- starts at 0, so the offset is actually any memory addres from 0 to the
+ starts at 0, so the offset is actually any memory address from 0 to the
  maximum address.
 \end_layout
 
@@ -31939,12 +32256,22 @@ bit_field
 \family typewriter
 .data5
 \family default
-, and is defined as an integer.
+, and is defined as a 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+char
+\end_layout
+
+\end_inset
+
+.
  For this reason, another 4 bytes are allocated just for 
 \family typewriter
 .data5
 \family default
-, even though it can only access 8 bits of information, and the final value
+, even though it can only access 4 bits of information, and the final value
  of 
 \family typewriter
 \color green
@@ -36123,6 +36450,7 @@ section 3.5.2.6
 LatexCommand citealt
 before "Optimization Manual,"
 key "intel_opt_manual"
+literal "true"
 
 \end_inset
 
@@ -36152,6 +36480,7 @@ sub
 LatexCommand citealt
 before "Optimization Manual,"
 key "intel_opt_manual"
+literal "true"
 
 \end_inset
 
@@ -53915,7 +54244,7 @@ LOAD
 \family typewriter
 0x0804851
 \family default
- becauase the start address is 
+ because the start address is 
 \family typewriter
 0x08048000
 \family default
@@ -56539,7 +56868,7 @@ This command examines the content of a given memory range.
 \end_layout
 
 \begin_layout Example
-We can examine the raw content of 
+We can examine the raw content in 
 \family typewriter
 main
 \family default
@@ -56632,7 +56961,7 @@ end{shelloutput16.6}
 \begin_layout Standard
 By default, without any argument, the command only prints the content of
  a single memory address.
- In this case, that is the starting memory address of 
+ In this case, that is the starting memory address in 
 \family typewriter
 main
 \family default
@@ -67720,7 +68049,7 @@ kernel:
 
 \begin_layout Plain Layout
 
-	nasm -f bin sample.asm -o bootloader.o
+	nasm -f bin sample.asm -o sample.o
 \end_layout
 
 \begin_layout Plain Layout
@@ -70180,7 +70509,7 @@ gdb
 \family typewriter
 ~/.gdbinit
 \family default
-? Because these commands are specific to only this projec e.g.
+? Because these commands are specific to only this project e.g.
  not all programs are required a remote connection.
 \end_layout
 
@@ -78615,7 +78944,7 @@ status open
 
 \begin_layout Plain Layout
 
-BUILD_DIR=../build_os
+BUILD_DIR=../build
 \end_layout
 
 \begin_layout Plain Layout
@@ -78670,7 +78999,7 @@ $(BUILD_DIR)/%.o: %.c
 
 \begin_layout Plain Layout
 
-	gcc $(CFLAGS) -m32 -c  $< -o $@
+	gcc $(CFLAGS) -c  $< -o $@
 \end_layout
 
 \begin_layout Plain Layout
@@ -80680,67 +81009,6 @@ reference "mem-state-bootloader"
 \end_inset
 
 :
-\end_layout
-
-\begin_layout Standard
-What is the reason for the incorrect Assembly code in 
-\family typewriter
-main
-\family default
- displayed by 
-\family typewriter
-gdb
-\family default
-? There can only be one cause: the bootloader jumped to the wrong addresses.
- But why was the address wrong? We made the 
-\family typewriter
-.text
-\family default
- section at address 
-\family typewriter
-0x500
-\family default
-, in which 
-\family typewriter
-main
-\family default
- code is in the first byte for executing, and instructed the bootloader
- to retrieve the address at the offset 
-\family typewriter
-0x18
-\family default
-, then jump to the entry address.
-\end_layout
-
-\begin_layout Standard
-Then, it might be possible for the bootloader to load the operating system
- address at the wrong address.
- But then, we explicitly set the load address to 
-\family typewriter
-50h:00
-\family default
-, which is 
-\family typewriter
-0x500
-\family default
-, and so the correct address was used.
- After the bootloader loads the 2
-\begin_inset script superscript
-
-\begin_layout Plain Layout
-nd
-\end_layout
-
-\end_inset
-
- sector, the in-memory state should look like the figure 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "mem-state-bootloader"
-
-\end_inset
-
-.
 \end_layout
 
 \begin_layout Standard
@@ -83023,7 +83291,7 @@ Both raw opcode displayed by the two programs are the same.
 \family typewriter
 gdb
 \family default
- correctly jumped to the address of 
+ correctly jumped to the address in 
 \family typewriter
 main
 \family default
@@ -83807,6 +84075,8 @@ bigskip}% perhaps as well
 \begin_inset CommandInset index_print
 LatexCommand printindex
 type "idx"
+name "Index"
+literal "true"
 
 \end_inset
 

@@ -1,4 +1,4 @@
-Operating Systems:
+﻿Operating Systems:
 From 0 to 1
 
 Tu, Do Hoang
@@ -215,7 +215,7 @@ systems to be a better software engineer.
 If that is the case, this book is for you. By going through this 
 book, you will be able to find the missing pieces that are 
 essential and enable you to implement your own operating system 
-from scratch! Yes, from scratch without going through any 
+from scratch! Yes, from scratch, without going through any 
 existing operating system layer to prove to yourself that you are 
 an operating system developer. You may ask,“Isn't it more 
 practical to learn the internals of Linux?”.
@@ -295,7 +295,7 @@ on getting started writing an operating system.
 
 Let's dive in. With this book, I hope to provide enough 
 foundational knowledge that will open doors for you to make sense 
-of other resources. This book is will be especially beneficial to 
+of other resources. This book will be especially beneficial to 
 students who've just finished their first C/C++ course. Imagine 
 how cool it would be to show prospective employers that you've 
 already built an operating system.
@@ -333,8 +333,8 @@ already built an operating system.
 
 • Touch typing. Since we are going to use Linux, touch typing 
   helps. I know typing speed does not relate to problem-solving, 
-  but at least your typing speed should be fast enough not to let 
-  it get it the way and degrade the learning experience.
+  but at least your typing speed should be fast enough to not let 
+  it get in the way and degrade the learning experience.
 
 In general, I assume that the reader has basic C programming 
 knowledge, and can use an IDE to build and run a program.
@@ -421,10 +421,10 @@ knowledge, and can use an IDE to build and run a program.
 
   Part 2 presents how to write a bootloader to bootstrap a 
   kernel. Hence the name “Groundwork”. After mastering this part, 
-  the reader can either continue with the next part that is a 
-  guide on writing an operating system. However, if the reader 
-  does not like the presentation, he or she can look elsewhere, 
-  such as OSDev Wiki: http://wiki.osdev.org/. 
+  the reader can continue with the next part, which is a guide 
+  for writing an operating system. However, if the reader does not 
+  like the presentation, he or she can look elsewhere, such as 
+  the OSDev Wiki: http://wiki.osdev.org/. 
 
   • Chapter 7 introduces what the bootloader is, how to write one 
     in assembly, and how to load it on QEMU, a hardware emulator. 
@@ -527,7 +527,7 @@ Problem domains: Software and Non-software.
      
 ]
 
-One example of such scenario is the domain that is presenting in 
+One example of such scenario is the domain that is presented in 
 this book: operating system. A certain amount of electrical 
 engineering (EE) knowledge is required to implement an operating 
 system. If a computer science (CS) curriculum that does not 
@@ -539,7 +539,7 @@ predefined framework just to understand high-level algorithms.
 For that reason, EE students have an easier time to implement an 
 OS, as they only need to study a few core CS courses. In fact, 
 only “C programming” and “Algorithms and Data Structures” classes 
-are usually enough to get them start writing code for device 
+are usually enough to get them started writing code for device 
 drivers, and later generalize it into an operating system.
 
 [float Figure:
@@ -560,7 +560,7 @@ intelligence, etc., are parts of software engineering domains
 (actually it is more of a computer science domain than a software 
 engineering domain). In general, a software-exclusive domain 
 creates software to be used by other software. Operating System 
-is also a domain, but is overlapped with other domain such as 
+is also a domain, but is overlapped with other domains such as 
 electrical engineering. To effectively implement an operating 
 system, it is required to learn enough of the external domain. 
 How much learning is enough for a software engineer? At the 
@@ -573,11 +573,11 @@ mean a software engineer can automatically be good at hardware
 programming or any related low-level programming domains. One can 
 spend 10 years, 20 years or his entire life writing C/C++ code, 
 and he still cannot write an operating system, simply because of 
-the ignorant of relevant domain knowledge. Just like learning 
+the ignorance of relevant domain knowledge. Just like learning 
 English does not mean a person automatically becomes good at 
 reading Math books written in English. Much more than that is 
 needed. Knowing one or two programming languages is not enough. 
-If a programmer writes software for a living, he should better be 
+If a programmer writes software for a living, he had better be 
 specialized in one or two problem domains outside of software if 
 he does not want his job taken by domain experts who learn 
 programming in their spare time.
@@ -587,8 +587,8 @@ programming in their spare time.
 Documents are essential for learning a problem domain (and 
 actually, anything) since information can be passed down in a 
 reliable way. It is evident that this written text has been used 
-for thousands of years to pass knowledge from generations to 
-generations. Documents are integral parts of non-trivial 
+for thousands of years to pass knowledge from generation to 
+generation. Documents are integral parts of non-trivial 
 projects. Without the documents:
 
 • New people will find it much harder to join a project.
@@ -626,14 +626,14 @@ upon the knowledge of the problem domain. The better understood
 the domain, the higher quality software can be. For example, 
 building a house is practiced over thousands of years and is well 
 understood, and it is easy to build a high-quality house; 
-software is no difference. Code that is difficult to understand, 
-usually because of the ignorance of problem domain. In the 
-context of this book, we sought to understand the low-level 
+software is no different. Code that is difficult to understand 
+is usually due to the author's ignorance of a problem domain. In
+the context of this book, we seek to understand the low-level 
 working of various hardware devices.
 
-Because software quality depends upon the understandings of the 
-problem domain, the amount of software requirement document 
-should consist of problem domain description.
+Because software quality depends upon an understanding of the 
+problem domain, a software requirement document should always 
+include a description of the problem domain.
 
 Be aware that software requirements are not:
 
@@ -674,19 +674,19 @@ Be aware that software requirements are not:
   ranting how useless documentation is. 
 
   More often than not there is no straightforward one-to-one 
-  mapping. For example, a regular computer user expects OS to be 
-  something that runs some program with GUI, or their favorite 
+  mapping. For example, a regular computer user expects an OS to
+  be something that runs some program with GUI, or their favorite 
   computer games. But for such requirements, an operating system 
-  is implemented as multiple layers, each hides the details from 
+  is implemented as multiple layers, each hiding the details from 
   the upper layers. To implement an operating system, a large 
-  body of knowledge from multiple fields are required, especially 
+  body of knowledge from multiple fields is required, especially 
   if the operating system runs on non-PC devices. 
 
-  It's better to put anything related to the problem domain in 
+  It's best to include informat related to the problem domain in 
   the requirement document. A good way to test the quality of 
-  requirement document is to hand it to the domain expert for 
-  proofreading if he can understand the material thoroughly. 
-  Requirement document is also useful as a help document later, 
+  a requirement document is to provide it to a domain expert 
+  for proofreading, to ensure he can understand the material. 
+  thoroughly. A requirement document is also useful as a help document later, 
   or for writing one much easier.
 
   Software Specification
@@ -730,7 +730,7 @@ requirement document and specification are usually separated.
 However, if the problem domain is inside software, specification 
 most often includes both, and content of both can be mixed with 
 each other. As demonstrated by previous sections the importance 
-of documents, to implement an OS, we will need to collects 
+of documents, to implement an OS, we will need to collect 
 relevant documents to gain sufficient domain knowledge. These 
 documents are as follow:
 
@@ -918,7 +918,7 @@ From NAND gate, we have all other gates. As demonstrated, such a
 simple circuitry performs the logical operators in day-to-day 
 program languages e.g. NOT operator ~ is executed directly by an 
 inverter circuit, and operator & is executed by an AND circuit 
-and so on. Code does not run on magic a black box. In contrast, 
+and so on. Code does not run on a magic black box. In contrast, 
 code execution is precise and transparent, often as simple as 
 running some hardwired circuit. When we write software, we simply 
 manipulate electrical current at the physical level to run 
@@ -973,7 +973,7 @@ logic gates. This feature is what make the chip popular.
 
   [float Figure:
 [Figure 0.3:
-74HC00 logic diagrams (Source: 74HC00 datasheet, http://www.nxp.com/documents/data_sheet/74HC_HCT00.pdf
+74HC00 logic diagrams (Source: 74HC00 datasheet, https://neurophysics.ucsd.edu/courses/physics_120/74HC00_QUAD_NAND.pdf
 )
 ]
 
@@ -1040,7 +1040,7 @@ computer system. A hardware device may not be a CPU but still has
 its language. A device with its own machine language is a 
 programmable device, since a user can use the language to command 
 the device to perform different actions. For example, a printer 
-has its set of commands for instructing it how to prints a page.
+has its set of commands for instructing it how to print a page.
 
 
 -------------------------------------------
@@ -1411,8 +1411,8 @@ not all of them are capable of express programs of each other.
 Programming languages vary between two ends of a spectrum: high 
 level and low level. 
 
-The higher level a programming language is, the distant it 
-becomes with hardware. In some high-level programming languages, 
+The higher level a programming language is, the more distant it 
+becomes from the hardware. In some high-level programming languages, 
 such as Python, a programmer cannot manipulate underlying 
 hardware, despite being able to deliver the same computations as 
 low-level programming languages. The reason is that high-level 
@@ -1561,8 +1561,8 @@ that provides a language, called dot, for describing graph:
 
   As can be seen, the code perfectly expresses itself how the 
   graph is connected. Even a non-programmer can understand and 
-  use such language easily. If it were to implement in C, it 
-  would be more troublesome, and this is assuming that the 
+  use such language easily. An implementation in C
+  would be more troublesome, and that's assuming that the 
   functions for drawing graphs are already available. To draw a 
   line, in C we might write something like:
 
@@ -2019,15 +2019,14 @@ essential to writing an OS from scratch:
 • After understanding one CPU architecture well, it is easier to 
   learn other CPU architectures.
 
-A CPU is an implementation of an ISA, effective the 
-implementation of an assembly language (and depends on the CPU 
+A CPU is an implementation of an ISA, effectively the 
+implementation of an assembly language (and depending on the CPU 
 architecture, the language may vary). Assembly language is one of 
 the interfaces that are provided for software engineers to 
 control a CPU, thus control a computer. But how can every 
 computer device be controlled with only the access to the CPU? 
 The simple answer is that a CPU can communicate with other 
-devices through these two interfaces, thus commanding them what 
-to do:
+devices through these two interfaces, thus commanding them:
 
   Registers Registers[margin:
 Registers
@@ -3699,7 +3698,7 @@ gcc throws an error.
 The data types in C, which represents the fundamental data types, 
 are also called unsigned numbers. Other than numerical 
 calculations, unsigned numbers are used as a tool for structuring 
-data in memory; we will this application see later in the book, 
+data in memory; we will see this application later on in the book, 
 when various data structures are organized into bit groups.
 
 In all the examples above, when the value of a variable with 
@@ -3739,10 +3738,10 @@ Pointers are variables that hold memory addresses. x86 works with
 
 
 
-C only provides near pointer, since far pointer is platform 
-dependent, such as x86. In application code, you can assume that 
+C only provides support for near pointers, since far pointers are platform 
+dependent. In application code, you can assume that 
 the address of current segment starts at 0, so the offset is 
-actually any memory addres from 0 to the maximum address.
+actually any memory address from 0 to the maximum address.
 
   Source
 
